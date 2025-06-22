@@ -194,5 +194,34 @@ Captures feedback from users about a property after a stay.
 - **Booking ⟶ Payment**: One-to-One (each booking has one payment)
 - **User ⟶ Review ⟶ Property**: Many-to-One (users can review many properties)
 
-This schema ensures data integrity and supports the core functionality of the application.
+
+
+## Feature Breakdown
+
+The AirBnB Clone project replicates essential features of the real AirBnB platform to offer users a full-stack booking experience. Each feature contributes to the overall functionality, user interaction, and business logic of the system.
+
+### 1. User Management
+Allows users to register, log in, and manage their profiles. Users can act as guests or hosts, with role-based permissions for listing properties or making bookings.
+
+### 2. Property Management
+Hosts can create, update, and delete property listings. Each property includes key details such as location, description, photos, and pricing—making it easier for guests to browse and choose accommodations.
+
+### 3. Booking System
+Guests can view availability, select travel dates, and book properties. The system prevents double-booking and ensures that booking rules such as check-in/check-out dates are enforced.
+
+### 4. Payment Integration
+Provides secure processing of payments linked to bookings. This feature handles transaction amounts, payment methods, and payment status to ensure financial transparency.
+
+### 5. Review and Rating System
+Guests can leave reviews and star ratings for properties they’ve stayed in. This fosters community trust and helps other users make informed booking decisions.
+
+### 6. Search and Filter
+Users can search for properties by location, price range, availability, and other criteria. This improves usability and helps users find listings that meet their needs.
+
+### 7. Database Optimizations
+Indexing: Implement indexes for fast retrieval of frequently accessed data.
+Caching: Use caching strategies to reduce database load and improve performance.
+
+
+
 
