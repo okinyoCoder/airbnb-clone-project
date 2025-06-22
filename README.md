@@ -31,41 +31,29 @@ Responsible for building and maintaining the core logic of the application. In t
 - Handle server-side logic and data processing.
 - Ensure integration with storage engines (e.g., file system or databases).
 
-### 2. Frontend Developer
-Focuses on the user interface and user experience. Their responsibilities include:
-- Creating responsive web pages using HTML, CSS, and JavaScript.
-- Implementing dynamic content rendering.
-- Ensuring compatibility across devices and browsers.
-
-### 3. Database Administrator (DBA)
+### 2. Database Administrator (DBA)
 Manages the database systems and ensures data integrity. In this project, DBAs:
 - Design and optimize database schemas.
 - Ensure smooth communication between the application and MySQL database.
 - Handle data backup, restoration, and security protocols.
 
-### 4. DevOps Engineer
+### 3. DevOps Engineer
 Automates deployment and manages infrastructure. Responsibilities include:
 - Setting up Docker environments, Nginx configurations, and CI/CD pipelines.
 - Monitoring application performance.
 - Managing servers for hosting and deployment.
 
-### 5. Project Manager
+### 4. Project Manager
 Oversees planning, execution, and progress tracking. Responsibilities include:
 - Assigning tasks and ensuring timely delivery.
 - Coordinating between developers, designers, and stakeholders.
 - Managing communication and documentation.
 
-### 6. QA Engineer / Tester
+### 5. QA Engineer / Tester
 Ensures that the application meets quality standards. Their tasks include:
 - Writing test cases for application features.
 - Performing manual and automated testing.
 - Reporting bugs and ensuring they are resolved.
-
-### 7. UI/UX Designer *(Optional in small teams)*
-Responsible for crafting user-friendly and visually appealing interfaces. They:
-- Design wireframes and mockups.
-- Conduct user research to enhance usability.
-- Collaborate with frontend developers for accurate implementation.
 
 
 
@@ -109,6 +97,102 @@ A platform for developing, shipping, and running applications in isolated contai
 Version control system and hosting platform for source code.  
 **Purpose:** Facilitates collaboration, version management, and code sharing among team members.
 
-### 10. Nginx (optional for deployment)
+### 10. CI/CD Pipelines
 A high-performance web server and reverse proxy.  
-**Purpose:** Serves static files and routes traffic to the Django application in a production environment.
+**Purpose:** Automated pipelines for testing and deploying code changes.
+
+
+## Database Design
+
+The AirBnB Clone project relies on a relational database structure that captures the core components of the platform, including users, properties, bookings, payments, and reviews. Below are the main entities, key fields, and their relationships.
+
+### 1. Users
+Represents the people who use the platform as either hosts or guests.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `username`: Login name for the user
+- `email`: Contact email
+- `password_hash`: Encrypted password
+- `is_host`: Boolean indicating if the user can list properties
+
+**Relationships:**
+- A user can host multiple properties.
+- A user can make multiple bookings.
+- A user can leave multiple reviews.
+
+---
+
+### 2. Properties
+Represents the listings available for booking.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `title`: Name or short description
+- `description`: Full property description
+- `location`: Address or area
+- `price_per_night`: Rental price
+
+**Relationships:**
+- A property is owned by one user (host).
+- A property can have multiple bookings.
+- A property can receive multiple reviews.
+
+---
+
+### 3. Bookings
+Represents reservations made by guests for a property.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user_id`: The guest who made the booking
+- `property_id`: The property being booked
+- `start_date`: Check-in date
+- `end_date`: Check-out date
+
+**Relationships:**
+- A booking is made by one user for one property.
+- A booking can result in a payment.
+
+---
+
+### 4. Payments
+Tracks financial transactions related to bookings.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `booking_id`: The related booking
+- `amount`: Total amount paid
+- `payment_method`: Method used (e.g., card, PayPal)
+- `status`: Payment status (e.g., completed, pending)
+
+**Relationships:**
+- Each payment is linked to one booking.
+
+---
+
+### 5. Reviews
+Captures feedback from users about a property after a stay.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user_id`: The reviewer
+- `property_id`: The reviewed property
+- `rating`: Star rating (e.g., 1–5)
+- `comment`: Textual feedback
+
+**Relationships:**
+- A review is made by one user for one property.
+
+---
+
+### 🔗 Entity Relationships Summary
+
+- **User ⟶ Property**: One-to-Many (a host can own many properties)
+- **User ⟶ Booking**: One-to-Many (a guest can make many bookings)
+- **Property ⟶ Booking**: One-to-Many (a listing can be booked many times)
+- **Booking ⟶ Payment**: One-to-One (each booking has one payment)
+- **User ⟶ Review ⟶ Property**: Many-to-One (users can review many properties)
+
+This schema ensures data integrity and supports the core functionality of the application.
+
