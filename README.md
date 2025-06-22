@@ -19,6 +19,8 @@ The AirBnB Clone project is a full-stack web development project that aims to re
 Anthony Odhiambo  
 https://github.com/okinyoCoder
 
+
+
 ## Team Roles
 
 Successful execution of the AirBnB Clone project requires collaboration across various team roles. Each team member contributes specialized expertise to ensure the functionality, stability, and usability of the final product.
@@ -65,5 +67,48 @@ Responsible for crafting user-friendly and visually appealing interfaces. They:
 - Conduct user research to enhance usability.
 - Collaborate with frontend developers for accurate implementation.
 
----
-Each role may overlap in smaller teams, but understanding these distinctions helps streamline collaboration and accountability across the project.
+
+
+## Technology Stack
+
+This project utilizes a modern full-stack development toolkit to efficiently build and deploy a scalable, maintainable AirBnB Clone application.
+
+### 1. Django
+A high-level Python web framework that encourages rapid development and clean, pragmatic design.  
+**Purpose:** Handles backend logic, URL routing, and RESTful API creation.
+
+### 2. PostgreSQL
+A powerful open-source relational database system.  
+**Purpose:** Stores structured data such as user accounts, bookings, property listings, and reviews.
+
+### 3. GraphQL
+A flexible query language for APIs and a runtime for executing queries by using a type system.  
+**Purpose:** Allows clients to request only the data they need, improving API performance and developer experience.
+
+### 4. HTML5
+The standard markup language for creating web pages.  
+**Purpose:** Provides the structure and content of the frontend interface.
+
+### 5. CSS3
+A styling language used to describe the look and layout of web documents.  
+**Purpose:** Enhances the visual presentation and responsiveness of the frontend UI.
+
+### 6. JavaScript (Vanilla or Frameworks like React)
+A scripting language that enables interactive web pages.  
+**Purpose:** Implements dynamic content and enhances user interactions on the frontend.
+
+### 7. Django REST Framework (DRF)
+A powerful toolkit built on Django for building Web APIs.  
+**Purpose:** Simplifies the creation of RESTful APIs to enable communication between frontend and backend.
+
+### 8. Docker
+A platform for developing, shipping, and running applications in isolated containers.  
+**Purpose:** Ensures consistent environments across development, testing, and production.
+
+### 9. Git & GitHub
+Version control system and hosting platform for source code.  
+**Purpose:** Facilitates collaboration, version management, and code sharing among team members.
+
+### 10. Nginx (optional for deployment)
+A high-performance web server and reverse proxy.  
+**Purpose:** Serves static files and routes traffic to the Django application in a production environment.
