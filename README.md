@@ -224,4 +224,37 @@ Caching: Use caching strategies to reduce database load and improve performance.
 
 
 
+## API Security
+
+Securing the backend APIs of the AirBnB Clone is critical to protect user data, ensure platform integrity, and prevent abuse. The following security measures will be implemented:
+
+### 1. Authentication
+All API endpoints will require proper user authentication using tokens (e.g., JWT or session-based authentication).  
+**Why it matters:** Ensures that only registered users can access their accounts and prevents unauthorized access to sensitive data.
+
+### 2. Authorization
+Access control will be enforced to ensure that users can only perform actions they are permitted to (e.g., only a host can edit their own properties).  
+**Why it matters:** Prevents users from modifying or accessing data they don’t own, such as other users’ bookings or payment information.
+
+### 3. HTTPS Enforcement
+All communication with the backend API will be served over HTTPS to encrypt data in transit.  
+**Why it matters:** Protects user credentials, personal data, and payment details from being intercepted during transmission.
+
+### 4. Input Validation & Sanitization
+All API inputs will be validated and sanitized to prevent SQL injection, XSS, and other common vulnerabilities.  
+**Why it matters:** Shields the application from malicious input that could compromise the system or corrupt data.
+
+### 5. Rate Limiting
+API usage will be monitored and restricted based on thresholds (e.g., max requests per minute).  
+**Why it matters:** Prevents abuse such as brute-force login attempts or denial-of-service attacks that can overwhelm the server.
+
+### 6. Secure Payment Processing
+Sensitive payment data will be handled through a secure, PCI-compliant third-party payment provider.  
+**Why it matters:** Ensures users' financial information is never exposed to the application directly, reducing liability and fraud risk.
+
+### 7. Error Handling & Logging
+Errors will be logged securely without exposing stack traces or internal logic to users.  
+**Why it matters:** Prevents attackers from gaining insights into system internals while helping developers diagnose issues safely.
+
+
 
