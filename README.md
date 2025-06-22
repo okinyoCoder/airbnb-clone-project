@@ -1,6 +1,6 @@
 # AirBnB Clone Project
 
-## Overview
+## 📖 Overview
 The AirBnB Clone project is a full-stack web development project that aims to recreate the core functionalities of the AirBnB platform. It is designed to demonstrate an understanding of object-oriented programming, web development, RESTful APIs, and deployment principles.
 
 ## Project Goals
@@ -21,7 +21,7 @@ https://github.com/okinyoCoder
 
 
 
-## Team Roles
+## 👥 Team Roles
 
 Successful execution of the AirBnB Clone project requires collaboration across various team roles. Each team member contributes specialized expertise to ensure the functionality, stability, and usability of the final product.
 
@@ -57,7 +57,7 @@ Ensures that the application meets quality standards. Their tasks include:
 
 
 
-## Technology Stack
+## 🧰 Technology Stack
 
 This project utilizes a modern full-stack development toolkit to efficiently build and deploy a scalable, maintainable AirBnB Clone application.
 
@@ -102,7 +102,7 @@ A high-performance web server and reverse proxy.
 **Purpose:** Automated pipelines for testing and deploying code changes.
 
 
-## Database Design
+## 🗂️ Database Design
 
 The AirBnB Clone project relies on a relational database structure that captures the core components of the platform, including users, properties, bookings, payments, and reviews. Below are the main entities, key fields, and their relationships.
 
@@ -196,7 +196,7 @@ Captures feedback from users about a property after a stay.
 
 
 
-## Feature Breakdown
+## ⚙️ Feature Breakdown
 
 The AirBnB Clone project replicates essential features of the real AirBnB platform to offer users a full-stack booking experience. Each feature contributes to the overall functionality, user interaction, and business logic of the system.
 
@@ -224,7 +224,7 @@ Caching: Use caching strategies to reduce database load and improve performance.
 
 
 
-## API Security
+## 🔐 API Security
 
 Securing the backend APIs of the AirBnB Clone is critical to protect user data, ensure platform integrity, and prevent abuse. The following security measures will be implemented:
 
@@ -258,7 +258,7 @@ Errors will be logged securely without exposing stack traces or internal logic t
 
 
 
-## CI/CD Pipeline
+## 🚀 CI/CD Pipeline
 
 ### What is CI/CD?
 
