@@ -258,3 +258,29 @@ Errors will be logged securely without exposing stack traces or internal logic t
 
 
 
+## CI/CD Pipeline
+
+### What is CI/CD?
+
+CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery). It is a set of automated processes that allow developers to integrate code changes more frequently and deploy applications more reliably. CI/CD helps streamline development by automatically building, testing, and deploying code whenever changes are pushed to the repository.
+
+### Why CI/CD is Important for This Project
+
+Implementing a CI/CD pipeline in the AirBnB Clone project ensures:
+- **Code Quality:** Automated tests catch bugs before deployment.
+- **Faster Delivery:** New features and fixes can be deployed quickly and consistently.
+- **Team Efficiency:** Developers spend less time on manual deployment and debugging.
+- **Consistency:** Applications are deployed in a repeatable, predictable environment, reducing human error.
+
+### Tools Used in the CI/CD Workflow
+
+- **GitHub Actions:** Automates testing and deployment directly from the GitHub repository. Triggers workflows on events like `push`, `pull_request`, or `merge`.
+- **Docker:** Containers ensure the application runs consistently across development, testing, and production environments.
+- **Docker Hub (or GitHub Container Registry):** Used for storing and distributing container images.
+- **Heroku / Render / DigitalOcean / AWS (optional):** Platform-as-a-Service providers for hosting the deployed application.
+- **pytest / unittest:** For running automated tests before deployment.
+- **Black / flake8:** For code formatting and linting to enforce code quality standards.
+
+---
+
+A well-configured CI/CD pipeline improves collaboration, code quality, and deployment speed—making it an essential part of modern software development.
